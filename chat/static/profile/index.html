@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        img {
+            width: 200px;
+            height: 200px;
+            border-radius: 20px;
+        }
+    </style>
+    <title>Profile</title>
+</head>
+<body>
+    <div id="container" hidden>
+        <img src="../files/img/default-profile.png" alt="profile img">
+        <input type="file" hidden accept="image/png, image/jpeg">
+        <div id="id">
+            <span>#id</span>
+        </div>
+        <div id="name">
+            <span>username</span>
+            <button hidden>이름 변경</button>
+        </div>
+    </div>
+    <script src="./profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --highlight-color: #b4eaeb;
+            --highlight-color-dark: #7ab6b7;
+        }
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        form {
+            border: 1px solid;
+            padding: 35px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-sizing: border-box;
+            font-size: 16px;
+            height: 270px;
+        }
+
+        #input {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #input input {
+            margin-bottom: 10px;
+            border: 2px solid #999;
+            padding: 5px 8px;
+            border-radius: 5px;
+            box-sizing: border-box;
+            width: 220px;
+            height: 35px;
+        }
+        #input input:focus {
+            outline: none;
+            border: 2px solid var(--highlight-color-dark);
+            transition: border .5s ease;
+        }
+        #input button {
+            width: 220px;
+            height: 35px;
+            margin-top: 5px;
+            background-color: var(--highlight-color);
+            border: 1px solid #999;
+            border-radius: 5px;
+        }
+
+        #login {
+            font-size: 14px;
+            margin: 0;
+        }
+    </style>
+    <title>sign up</title>
+</head>
+<body>
+    <div id="container">
+        <form>
+            <div id="input">
+                <input type="text" id="username" placeholder="username" autocomplete="off">
+                <input type="text" id="id" autofocus placeholder="id" autocomplete="off">
+                <input type="password" id="pw" placeholder="password" autocomplete="off">
+                <button>회원가입</button>
+            </div>
+            <p id="login">
+                <span>계정이 있으신가요?</span>
+                <a href="/login">로그인</a>
+            </p>
+        </form>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
